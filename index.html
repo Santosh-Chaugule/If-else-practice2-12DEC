@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If-else</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        text-align: center;
+        background-color: aliceblue;
+        position: relative;
+      }
+      .container {
+        height: 300px;
+        width: 400px;
+        border: 2px solid rgb(17, 16, 16);
+        background-color: grey;
+
+        position: absolute;
+        top: 150px;
+        left: 450px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>First Input:</h3>
+      <input type="text" name="text" id="first" /> <br /><br />
+      <h3>Second Input:</h3>
+
+      <input type="text" name="text" id="second" />
+      <br /><br />
+      <button onclick="check()">Submit</button>
+      <br /><br />
+      <h1 id="result"></h1>
+    </div>
+    <script>
+      function check() {
+        var first_value = document.getElementById("first").value;
+        var second_value = document.getElementById("second").value;
+        var result = document.getElementById("result");
+        if (first_value == second_value) {
+          result.innerHTML = "CORRECT";
+        } else {
+          result.innerHTML = "INCORRECT";
+        }
+      }
+    </script>
+  </body>
+</html>
